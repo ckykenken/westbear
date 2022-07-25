@@ -1,0 +1,27 @@
+options:
+    serverName: WestBear
+    riderOffline: &7還未開始送遞
+    riderReady: &a預備
+    riderOnline: &a上線中
+    riderPaused: &7暫停
+    riderEnding: &a即將結束
+
+
+
+
+on join:
+    setup skoreboard for player
+    add player to {scoreboards::default::players::*}
+    
+
+
+
+    if player has a skoreboard:
+        set title of skoreboard player to "&c{@serverName}"
+        set slot 7 of skoreboard player to "&b狀態：{@riderReady}"
+        set slot 6 of skoreboard player to ""
+        set slot 5 of skoreboard player to ""
+        set slot 4 of skoreboard player to "&b接單率：&a100%%"
+        set slot 2 of skoreboard player to "&b預計收入：&a$0"
+        set slot 2 of skoreboard player to "&b================="
+        set slot 1 of skoreboard player to "&bplay.someserver.net"
